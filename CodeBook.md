@@ -15,8 +15,8 @@ Our assignment was to only analyze the data for mean and standard deviation, so 
 This strategy may have resulted in a few too many feature "means", but better to include too much that omit something important.
 The key for the activity names was provided in the file "activities".  I merged these descriptive names to the data set by activity id.
 The feature names were a little messy, because they included punctuation characters "()-".  I removed instances of "()", and transformed "-" to "_" and orphan "(" and ")" to "_".
-I then added the cleaned up feature names to the data set as column names.
-In order to aggregate the mean of each feature data by activity and subject, I "melted" the data using the package "reshape2", with person id, activity, and activity id ad the IDs, and all the features as variables.
+I then added the cleaned-up feature names to the data set as column names.
+In order to aggregate the mean of each feature data by activity and subject, I "melted" the data using the package "reshape2", with person id, activity, and activity id as the IDs, and all the features as variables.
 Then, I cast the data with the mean function.  The result is one row for each person/activity, and the mean of each feature.
 
 
