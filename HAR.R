@@ -44,7 +44,7 @@ extract$V4<-gsub("-","_",extract$V4)
 colnames(extract_set)=append(c("activity_id","activity","person_id"),extract$V4) 
 #Download package reshape2 if needed.  Install it.
 if (!require(reshape2)){
-        install.packages(reshape2)
+        install.packages("reshape2")
 } 
 library(reshape2)
 melted_extract<-melt(extract_set,id.vars=c("activity_id","activity","person_id"))
