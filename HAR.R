@@ -4,6 +4,7 @@ if (!file.exists("UCI HAR Dataset")) {
         fileURL="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
         Local_Name="HAR.zip"
         download.file(url=fileURL, dest = Local_Name)
+        # On a Mac, you may need to add method=curl to the previous command
         dateDownloaded <- date()
         unzip(Local_Name)
 }
