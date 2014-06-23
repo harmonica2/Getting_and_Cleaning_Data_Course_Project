@@ -30,7 +30,7 @@ full_set<-rbind(full_test,full_train)
 features$mean<-grepl("mean",features$V2,ignore.case=TRUE)
 features$std<-grepl("std",features$V2,ignore.case=TRUE)
 extract<-features[features$mean|features$std,]
-extract$V3<-extract$V1+2
+extract$V3<-extract$V1+2 # I had to add 2 to each column number to correct for the two extra columns (People IDs and Activity IDs) in the full set.
 extract_set<-subset(full_set,select=c(1,2,extract$V3))
 # Add a column with activity names
 colnames(activities)<-c("activity_numbers","activity")
